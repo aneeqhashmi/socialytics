@@ -1,0 +1,21 @@
+<h1>Home</h1>
+
+Entity:
+<!-- <input #entity type="text"> -->
+<select (change)="getData(entity.value)" #entity>
+  <option value="Imran Khan">Imran Khan</option>
+  <option value="Nawaz Sharif">Nawaz Sharif</option>
+</select>
+<br/>
+<br>
+<textarea #text (keyup.enter)="submit()" style="width:80%; height:100px;"></textarea> 
+<!-- <input #text type="text" aria-multiline="10" (keyup.enter)="submit()"> -->
+<br/>
+<button (click)="submit()" >Submit</button>
+<br><br>
+<fusioncharts #chart
+  width="600" 
+  height="400"
+  type="mscombi2d"
+  [dataSource]=dataSource>
+</fusioncharts>
